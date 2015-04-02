@@ -19,7 +19,7 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-    this.x = this.x + (this.speed * dt);
+    this.x = this.x + (this.speed * dt); //speed is multiplied by dt parameter
     if (this.x > 600) {
         this.x = -100
         this.y = this.y + 83;
@@ -28,16 +28,8 @@ Enemy.prototype.update = function(dt) {
             this.y = 83;
         }
     }
-<<<<<<< HEAD
-    if (player.y >= this.y - collisionCheck && player.y <= this.y + collisionCheck) {
-        if (player.x >= this.x - collisionCheck && player.x <= this.x + collisionCheck) {
-        player.reset();
-        
-        }
-    }
 }
-=======
-}
+    
     function checkCollisions(enemy, player) {
         for(var i in enemy){
             if ((player.y >= enemy[i].y - collisionCheck && player.y <= enemy[i].y + collisionCheck) && (player.x >= enemy[i].x - collisionCheck && player.x <= enemy[i].x + collisionCheck)) {
@@ -48,7 +40,6 @@ Enemy.prototype.update = function(dt) {
     }
     
 
->>>>>>> master
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
@@ -59,11 +50,7 @@ Enemy.prototype.render = function() {
 var Player = function() {
   this.x = 200;
   this.y = 400;
-<<<<<<< HEAD
-  this.image = 'images/char-boy.png';
-=======
   this.sprite = 'images/char-boy.png';
->>>>>>> master
 }
 
 Player.prototype.update = function() {
@@ -87,11 +74,7 @@ Player.prototype.update = function() {
 }
 
 Player.prototype.render = function() {
-<<<<<<< HEAD
- ctx.drawImage(Resources.get(this.image), this.x, this.y);
-=======
  ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
->>>>>>> master
 }
 
 Player.prototype.handleInput = function(allowedKeys) {
@@ -113,13 +96,6 @@ Player.prototype.reset = function() {
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
-<<<<<<< HEAD
-var enemyA = new Enemy();
-var enemyB = new Enemy();
-var enemyC = new Enemy();
-var enemyD = new Enemy();
-var allEnemies = [enemyA, enemyB, enemyC, enemyD];
-=======
 
 var allEnemies = [];
 for(var i = 0; i < 6; i++){
@@ -127,7 +103,6 @@ for(var i = 0; i < 6; i++){
     allEnemies.push(nenemy);
 }
 
->>>>>>> master
 var player = new Player();
 
 // This listens for key presses and sends the keys to your
