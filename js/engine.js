@@ -47,7 +47,11 @@ var Engine = (function(global) {
          */
         update(dt);
         render();
+<<<<<<< HEAD
 
+=======
+        gameBoard();
+>>>>>>> master
         /* Set our lastTime variable which is used to determine the time delta
          * for the next time this function is called.
          */
@@ -80,7 +84,11 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
+<<<<<<< HEAD
         // checkCollisions();
+=======
+        checkCollisions(allEnemies, player);
+>>>>>>> master
     }
 
     /* This is called by the update function  and loops through all of the
@@ -154,8 +162,15 @@ var Engine = (function(global) {
 
         player.render();
     }
+<<<<<<< HEAD
     function gamer() {
         
+=======
+    function gameBoard() {
+        // doc.querySelector(".sb_board").innerHTML = player.score;
+        // doc.querySelector(".plevel").innerHTML = player.level;
+
+>>>>>>> master
     }
     /* This function does nothing but it could have been a good place to
      * handle game reset states - maybe a new game menu or a game over screen
